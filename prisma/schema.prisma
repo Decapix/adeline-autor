@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// we use cloudinary and image urls for image 
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+    // postgres://decapixd:pMXUjm0W7YkI@ep-bold-cell-01358162.eu-central-1.aws.neon.tech/neondb
+}
+
+// models
+
+
+
+
+  // title
+model TitleBook {
+  id   String @id @default(uuid()) @unique
+  fr   String 
+  en   String 
+  es   String 
+  ru   String 
+  ja   String 
+
+  book Book?
+}
+
+model TitleText {
+  id   String @id @default(uuid()) @unique
+  fr   String 
+  en   String 
+  es   String 
+  ru   String 
+  ja   String 
+
+  text Text?
+}
+
+
+  // text
+model TextBook {
+  id   String @id @default(uuid()) @unique
+  fr   String 
+  en   String 
+  es   String 
+  ru   String 
+  ja   String 
+
+  book Book?
+
+}
+
+model TextText {
+  id   String @id @default(uuid()) @unique
+  fr   String 
+  en   String 
+  es   String 
+  ru   String 
+  ja   String 
+
+  text Text?
+}
+
+
+  // useful
+model Text {
+  id          String      @id @default(uuid()) @unique
+  title        TitleText        @relation(fields: [titleId], references: [id], onDelete: Cascade)
+  titleId      String       @unique
+  description  TextText        @relation(fields: [descriptionId], references: [id], onDelete: Cascade)
+  descriptionId String      @unique
+  image1       String
+  image2       String?
+  image3       String?
+  image4       String?
+  image5       String?
+  image6       String?
+  image7       String?
+  image8       String?
+  book      Book?   @relation(fields: [bookId], references: [id])
+  bookId    String?
+}
+
+
+
+model Book {
+  id           String       @id @default(uuid()) @unique
+  title        TitleBook        @relation(fields: [titleId], references: [id], onDelete: Cascade)
+  titleId      String       @unique
+  description  TextBook        @relation(fields: [descriptionId], references: [id], onDelete: Cascade)
+  descriptionId String      @unique
+  mainImage    String
+  image1       String?
+  image2       String?
+  image3       String?
+  image4       String?
+  type         String
+  texts       Text[]
+}
+
+
