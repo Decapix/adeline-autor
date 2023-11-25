@@ -25,7 +25,7 @@ let leng;
 
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-  <div class="container"><a class="navbar-brand" href="#"><img class="img-fluid" src="assets/img/icons/logo.png" alt="" /></a>
+  <div class="container"><a class="navbar-brand" href="#"><img class="img-fluid pt-2" src="assets/img/icons/logo.png" alt="" style="max-width: 70%;" /></a>
   <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto ms-lg-4 ms-xl-7  pt-2 pt-lg-0">
@@ -37,5 +37,3 @@ let leng;
   </div>
   </div>
 </nav>
-
-

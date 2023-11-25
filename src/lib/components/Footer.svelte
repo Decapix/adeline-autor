@@ -47,37 +47,31 @@ let leng;
           
         </div>
         <div class="row justify-content-lg-around">
-          <div class="col-12 col-sm-12 col-lg-3 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img class="img-fluid me-3" src="assets/img/icons/logo.png" alt="" /><span class="fw-bold fs-1 text-1000">DataWarehouse</span></a>
-          <p class="mt-4">Warehouse Society, 234 <br />Bahagia Ave Street PRBW 29281</p>
-          <p>info@warehouse.project<br />1-232-3434 (Main) </p>
+          <div class="col-12 col-sm-12 col-lg-3 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img class="img-fluid me-3 pb-3" src="assets/img/icons/logo.png" alt="" style="max-width: 70%;" /></a>
+          <p class="mt-4">8 chemin des maraîchers <br />73100  Tresserve <br />France</p>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 mb-3 order-2 order-sm-1">
-          <h6 class="lh-lg fw-bold mb-4">About</h6>
           <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Profile</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Features</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Careers</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">DW News</a></li>
+            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="/">Accueil</a></li>
+            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="/biography">Biographie</a></li>
+
           </ul>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 mb-3 order-3 order-sm-2">
-          <h6 class="lh-lg fw-bold mb-4"> Help </h6>
           <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Support</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Sign Up </a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Guide</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Reports</a></li>
-            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="#!">Q&amp;A</a></li>
+            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="/text">Textes</a></li>
+            <li class="lh-lg"><a class="text-dark fs--1 text-decoration-none" href="/book">Livres</a></li>
           </ul>
           </div>
           <div class="col-12 col-sm-4 col-lg-3 mb-3 order-1 order-sm-3">
-          <h6 class="lh-lg fw-bold mb-4">Me contacter</h6>
+          <h6 class="lh-lg fw-bold mb-2">Me contacter</h6>
           <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="#!"><img class="img-fluid" src="assets/img/icons/f.png" width="40" alt="" /></a></li>
+            <!-- <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="#!"><img class="img-fluid" src="assets/img/icons/f.png" width="40" alt="" /></a></li>
             <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="#!"><img class="img-fluid" src="assets/img/icons/t.png" width="40" alt="" /></a></li>
-            <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="#!"><img class="img-fluid" src="assets/img/icons/i.png" width="40" alt="" /></a></li>
+            <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="#!"><img class="img-fluid" src="assets/img/icons/i.png" width="40" alt="" /></a></li> -->
+            <li class="list-inline-item"><a class="text-dark fs--1 text-decoration-none" href="https://www.linkedin.com/today/author/adeline-pesic-aabb75165"><img class="img-fluid" src="assets/img/icons/i.webp" width="40" alt="" style="max-width: 70%;" /></a></li>
             <p class="pt-2">adeline.pesic@orange.com</p>
-            <p>ok ok ok ok ok </p>
+            <p>+33 (0)6 08 10 64 20</p>
           </ul>
           </div>
         </div>
