@@ -36,7 +36,7 @@
             <!-- Miniatures des images -->
             {#each images as image}
               <img
-                class="img-thumbnail mx-1"
+                class="img-thumbnail mx-1 small-image"
                 src={image}
                 alt="Image miniature"
                 on:mouseover={handleMouseOver.bind(this, image)}
