@@ -3,12 +3,6 @@ import { prisma } from "$lib/server/prisma"
 import { error, fail } from "@sveltejs/kit"
 
 
-
-export const actions = {
-  createText,
-    deleteText,
-};
-
 export const load = async ({ setHeaders }) => {
   // Définir les en-têtes HTTP
   setHeaders({
@@ -116,4 +110,10 @@ export const load = async ({ setHeaders }) => {
   
   
   
+  
+
+  export const actions = {
+    createText,
+      deleteText,
+  };
   

@@ -4,12 +4,6 @@ import { error, fail } from "@sveltejs/kit"
 
 
 
-export const actions = {
-  createBook,
-  deleteBook,
-};
-
-
 export const load = async ({ setHeaders }) => {
   // Définir les en-têtes HTTP
   setHeaders({
@@ -127,6 +121,13 @@ const deleteBook = async({url}) => {
   return {
     status: 200,
   };
+};
+
+
+
+export const actions = {
+  createBook,
+  deleteBook,
 };
 
 

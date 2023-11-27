@@ -29,9 +29,6 @@ export const load = async ({ setHeaders, params }) => {
     }
 }
 
-export const actions = {
-    updateText,
-};
 
 
 
@@ -97,3 +94,7 @@ export const actions = {
   
     return { status: 200 };
   };
+
+export const actions = {
+    updateText,
+};

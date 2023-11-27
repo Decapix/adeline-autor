@@ -32,9 +32,6 @@ export const load = async ({ setHeaders, params }) => {
     }
 }
 
-export const actions = {
-    updateBook,
-};
 
 
 const updateBook = async({request, params}) => {
@@ -127,3 +124,8 @@ const updateBook = async({request, params}) => {
     }
   
   };
+
+
+  export const actions = {
+    updateBook,
+};
