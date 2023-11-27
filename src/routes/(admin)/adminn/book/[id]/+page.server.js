@@ -4,7 +4,13 @@ import {
  } from '$lib/server/use';
 import { error, fail } from "@sveltejs/kit"
 
-export const load = async({params}) => {
+
+
+export const load = async ({ setHeaders, params }) => {
+        // Définir les en-têtes HTTP
+        setHeaders({
+            'Cache-Control': `max-age=0, s-maxage=60`,
+        });
 
     const getBook = async () => {
         const book = await prisma.Book.findUnique({
