@@ -34,11 +34,12 @@ export const load = async ({  params }) => {
 
 const updateBook = async({request, params}) => {
     const data = await request.formData();
-    const mainImage = data.get('mainImage');
     const image1 = data.get('image1');
     const image2 = data.get('image2');
     const image3 = data.get('image3');
     const image4 = data.get('image4');
+    const image5 = data.get('image5');
+
     const type = data.get('type');
   
     let fr = data.get('frt');
@@ -105,11 +106,11 @@ const updateBook = async({request, params}) => {
           id: bookId,
         },
         data: {
-          mainImage,
           image1,
           image2,
           image3,
           image4,
+          image5,
           type,
         }
       });
