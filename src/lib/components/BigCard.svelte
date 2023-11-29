@@ -19,7 +19,7 @@
         <div class="col-12">
           <div class={`card  bg-soft-${color[index % color.length]} rounded-3`}>
             <div class="row g-0 align-items-center">
-              {#if item.image2}
+              {#if item.image1}
               <div class="col-sm-12 col-md-6 col-lg-4 custom-img-container">
                 <img class="custom-img" src={`${item.image1}`} alt="" />
               </div>

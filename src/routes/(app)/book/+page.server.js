@@ -7,11 +7,9 @@ import { error, fail } from "@sveltejs/kit"
 
 
 
-export const load = async ({ setHeaders }) => {
+export const load = async () => {
   // Définir les en-têtes HTTP
-  setHeaders({
-      'Cache-Control': `max-age=0, s-maxage=${60 * 60}`,
-  });
+
   return {
     books : await prisma.book.findMany(
       {

@@ -4,11 +4,9 @@ import { error, fail } from "@sveltejs/kit"
 
 
 
-export const load = async({params, setHeaders}) => {
+export const load = async({params}) => {
         // Définir les en-têtes HTTP
-        setHeaders({
-            'Cache-Control': `max-age=0, s-maxage=60`,
-        });
+
     
 
     const getBook = async () => {
