@@ -140,14 +140,6 @@
 				<div class="mb-4">
 					<input
 						type="text"
-						name="mainImage"
-						value="{book.mainImage}"
-						class="px-4 py-2 border rounded w-full"
-					/>
-				</div>
-				<div class="mb-4">
-					<input
-						type="text"
 						name="image1"
 						value="{book.image1}"
 						class="px-4 py-2 border rounded w-full"
@@ -175,6 +167,14 @@
 						type="text"
 						name="image4"
 						value="{book.image4}"
+						class="px-4 py-2 border rounded w-full"
+					/>
+				</div>
+				<div class="mb-4">
+					<input
+						type="text"
+						name="image5"
+						value="{book.image5}"
 						class="px-4 py-2 border rounded w-full"
 					/>
 				</div>

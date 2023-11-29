@@ -92,11 +92,11 @@ model Book {
   titleId      String       @unique
   description  TextBook        @relation(fields: [descriptionId], references: [id], onDelete: Cascade)
   descriptionId String      @unique
-  mainImage    String
   image1       String?
   image2       String?
   image3       String?
   image4       String?
+  image5       String?
   type         String
   texts       Text[]
 }

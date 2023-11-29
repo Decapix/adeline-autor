@@ -8,7 +8,7 @@
   function getImages(book) {
   return [
     book.image1, book.image2, book.image3, book.image4,
-    book.image5, book.image6, book.image7, book.image8
+    book.image5
   ].filter(image => image); // Cela exclura `null`, `undefined`, et les chaînes vides
 }
 
