@@ -88,6 +88,12 @@ padding: 10px; /* Espace autour du texte */
 /* Media Queries pour les petits écrans, typiquement les téléphones */
 @media (max-width: 990px) { /* Bootstrap définit le point de rupture pour les petits écrans à 768px */
 
+.centertel {
+  justify-content: center;
+  align-items: center;
+}
+
+
 .custom-img-container,
 .card-body {
   width: 100%; /* Utilise toute la largeur disponible */
@@ -123,6 +129,7 @@ padding: 10px; /* Espace autour du texte */
   height: 100px;
   object-fit: cover;
 }
+
 
 
 
