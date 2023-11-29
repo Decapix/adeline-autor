@@ -60,6 +60,8 @@ text-decoration: none; /* Supprime le soulignement par défaut */
 }
 
 
+
+
 @media (min-width: 989px) {
 
 
@@ -89,8 +91,10 @@ padding: 10px; /* Espace autour du texte */
 @media (max-width: 990px) { /* Bootstrap définit le point de rupture pour les petits écrans à 768px */
 
 .centertel {
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* You can set the width as you want */
 }
 
 
