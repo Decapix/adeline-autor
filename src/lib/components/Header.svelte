@@ -86,7 +86,7 @@ let leng;
       <a
       use:closeNavbarOnMobile
       class="nav-link fw-bold {activeRoute === '/text/' ? 'active' : ''}"
-      href="/text/">Mes Textes</a>
+      href="/text/">Mes textes</a>
     </li>
     <li class="nav-item">
       <a
