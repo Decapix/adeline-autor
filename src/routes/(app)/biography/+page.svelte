@@ -7,7 +7,7 @@
 
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-3 col-lg-3 order-md-1 pt-8"><img class="img-fluid rounded-3" src="assets/img/illustrations/auteures2.jpg" alt="adeline pesic" /></div>
+        <div class="col-md-3 col-lg-3 order-md-1 pt-8"><img loading="lazy" class="img-fluid rounded-3" src="assets/img/illustrations/auteures2.jpg" alt="adeline pesic" /></div>
         <div class="col-md-9 col-lg-9 text-center text-md-start pt-5 pt-md-9">
           <h1 class="mb-4 display-2 fw-bold">Biographie</h1>
           <p class="mt-3 mb-4">Adeline Pesic commence à écrire dès son plus jeune âge. À 13 ans, elle écrit déjà des nouvelles, des poèmes, des polars… Dans les années qui suivent, elle explore d’autres disciplines artistiques telles que la peinture, la sculpture et la photographie tout en gardant un goût prononcé pour les sciences.<br/><br/>

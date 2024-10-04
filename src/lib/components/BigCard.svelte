@@ -22,7 +22,7 @@
             <div class="row g-0 align-items-center">
               {#if item.image1}
               <div class="col-sm-12 col-md-6 col-lg-4 custom-img-container">
-                <img class="custom-img" src={`${item.image1}`} alt="" />
+                <img loading="lazy" class="custom-img" src={`${item.image1}`} alt="" />
               </div>
               {/if}
               <div class="px-md-2 px-xl-6 text-center text-md-start {item.image1 ? 'col-md-7 col-lg-6' : 'col-12'}">

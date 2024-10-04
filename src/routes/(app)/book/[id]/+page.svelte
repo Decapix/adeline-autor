@@ -30,12 +30,12 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-5 col-lg-7 order-md-1 pt-8">
-        <img class="img-fluid rounded-3" src={mainImage} alt="Image principale" />
+        <img loading="lazy" class="img-fluid rounded-3" src={mainImage} alt="Image principale" />
         <div class="row mt-3">
           <div class="col">
             <!-- Miniatures des images -->
             {#each images as image}
-              <img
+              <img loading="lazy"
                 class="img-thumbnail mx-1 small-image"
                 src={image}
                 alt="Image miniature"

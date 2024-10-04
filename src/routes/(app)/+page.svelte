@@ -15,7 +15,7 @@ import BigCard from '$lib/components/BigCard.svelte';
   
 		  <div class="container">
 			<div class="row align-items-center">
-			  <div class="col-md-5 col-lg-7 order-md-1 pt-8"><img class="img-fluid centertel rounded-2" src="assets/img/illustrations/fau.jpg" alt="" /></div>
+			  <div class="col-md-5 col-lg-7 order-md-1 pt-8"><img loading="lazy" class="img-fluid centertel rounded-2" src="assets/img/illustrations/fau.jpg" alt="" /></div>
 			  <div class="col-md-7 col-lg-5 text-center text-md-start pt-5 pt-md-9">
 				<h1 class="mb-4 display-2 fw-bold">Autrice jeunesse</h1>
 				<p class="mt-3 mb-4">Ce sont avant tout la joie et la bonne humeur qu'Adeline Pesic transmet
