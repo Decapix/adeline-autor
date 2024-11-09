@@ -1,1 +1,1 @@
-web: gunicorn mevsite.wsgi --log-file -
+web: gunicorn adeline.wsgi --log-file -
