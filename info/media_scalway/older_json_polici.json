@@ -1,0 +1,24 @@
+{
+  "Id": "",
+  "Version": "2023-04-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Principal": {
+        "SCW": []
+      },
+      "Action": [],
+      "Effect": "Allow",
+      "Resource": []
+    },
+    {
+      "Sid": "Scaleway secure statement",
+      "Action": "*",
+      "Effect": "Allow",
+      "Resource": ["", "/*"],
+      "Principal": {
+        "SCW": ["user_id:57964dd1-0fc4-4b8a-a75b-0c495f71f7a3"]
+      }
+    }
+  ]
+}

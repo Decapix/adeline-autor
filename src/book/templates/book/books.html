@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<section class="py-4 pt-10">
+    {% for book in books %}
+        <div class="container pb-4 card-item">
+          <a href="{% url 'book_detail' book.id %}" class="card-link">
+            <div class="row">
+              <div class="col-12">
+                <div class="card rounded-3">
+                  <div class="row g-0 align-items-center">
+                    {% if book.image1 %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 custom-img-container">
+                      <img loading="lazy" class="custom-img" src="{{ book.image1.url }}" alt="{{ book.title }} image" />
+                    </div>
+                    {% endif %}
+                    <div class="px-md-2 px-xl-6 book-center book-md-start {% if book.image1 %}col-md-7 col-lg-6{% else %}col-12{% endif %}">
+                      <div class="card-body px-4 py-5 p-lg-3 p-md-4">
+                        <h1 class="mb-4 fw-bold">{{ book.title }}</h1>
+                        <p class="card-book">{{ book.description|truncatechars:200 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+    {% endfor %}
+
+</section>
+{% endblock %}
