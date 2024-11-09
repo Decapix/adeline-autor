@@ -17,7 +17,6 @@
 
         <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
         <link href="{% static 'assets/css/tailwind.css' %}" rel="stylesheet" />
-        <link href="{% static 'assets/css/theme.scss' %}" rel="stylesheet" />
         <title>
             Adeline Pesic - Auteure Jeunesse Inspirante | Livres Enfants
             Captivants
@@ -66,20 +65,20 @@
                             class="navbar-nav me-auto ms-lg-4 ms-xl-7 pt-2 pt-lg-0"
                         >
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="/">Accueil</a>
+                                <a class="nav-link fw-bold" href="{% url 'home' %}">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="/biography/"
+                                <a class="nav-link fw-bold" href="{% url 'biography' %}"
                                     >Biographie</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="/text/"
+                                <a class="nav-link fw-bold" href="{% url 'texts' %}"
                                     >Mes textes</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="/book/"
+                                <a class="nav-link fw-bold" href="{% url 'books' %}"
                                     >Mes livres</a
                                 >
                             </li>
@@ -106,7 +105,7 @@
                                     <img
                                         loading="lazy"
                                         class="img-fluid me-3 pb-3"
-                                        src="assets/img/icons/logo.png"
+                                        src="{% static 'assets/img/icons/logo.png' %}"
                                         alt=""
                                         style="max-width: 70%"
                                     />
@@ -123,14 +122,14 @@
                                     <li class="lh-lg">
                                         <a
                                             class="text-dark fs--1 text-decoration-none"
-                                            href="/"
+                                            href="{% url 'home' %}"
                                             >Accueil</a
                                         >
                                     </li>
                                     <li class="lh-lg">
                                         <a
                                             class="text-dark fs--1 text-decoration-none"
-                                            href="/biography"
+                                            href="{% url 'biography' %}"
                                             >Biographie</a
                                         >
                                     </li>
@@ -143,14 +142,14 @@
                                     <li class="lh-lg">
                                         <a
                                             class="text-dark fs--1 text-decoration-none"
-                                            href="/text"
+                                            href="{% url 'texts' %}"
                                             >Textes</a
                                         >
                                     </li>
                                     <li class="lh-lg">
                                         <a
                                             class="text-dark fs--1 text-decoration-none"
-                                            href="/book"
+                                            href="{% url 'books' %}"
                                             >Livres</a
                                         >
                                     </li>
@@ -169,7 +168,7 @@
                                             <img
                                                 loading="lazy"
                                                 class="img-fluid"
-                                                src="assets/img/icons/i.webp"
+                                                src="{% static 'assets/img/icons/i.webp' %}"
                                                 width="40"
                                                 alt=""
                                                 style="max-width: 70%"
@@ -193,41 +192,44 @@
         <script src="{% static 'assets/js/theme.js' %}"></script>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const navLinks = document.querySelectorAll(".nav-link");
-                const urlPathname = window.location.pathname; // Obtenez le chemin actuel
-                navLinks.forEach((link) => {
-                    if (link.getAttribute("href") === urlPathname) {
-                        link.classList.add("active");
-                    }
-                    link.addEventListener("click", function () {
-                        if (window.innerWidth < 992) {
-                            const navbarToggler =
-                                document.querySelector(".navbar-toggler");
-                            const navbarCollapse =
-                                document.querySelector(".navbar-collapse");
-                            if (
-                                !navbarToggler.classList.contains("collapsed")
-                            ) {
-                                navbarToggler.click();
-                            }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Code nav-links
+            const navLinks = document.querySelectorAll(".nav-link");
+            const urlPathname = window.location.pathname;
+            navLinks.forEach((link) => {
+                if (link.getAttribute("href") === urlPathname) {
+                    link.classList.add("active");
+                }
+                link.addEventListener("click", function () {
+                    if (window.innerWidth < 992) {
+                        const navbarToggler = document.querySelector(".navbar-toggler");
+                        const navbarCollapse = document.querySelector(".navbar-collapse");
+                        if (!navbarToggler.classList.contains("collapsed")) {
+                            navbarToggler.click();
                         }
-                    });
+                    }
                 });
             });
 
-            // JavaScript pour afficher l'année courante
-            document.addEventListener("DOMContentLoaded", function () {
-                const yearSpan = document.querySelector(".current-year");
-                if (yearSpan) {
-                    yearSpan.textContent = new Date().getFullYear();
-                }
-            });
-        </script>
+            // Année courante
+            const yearSpan = document.querySelector(".current-year");
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
 
+            // Couleurs des cartes
+            const colors = ["warning", "danger", "info", "success"];
+            const cardItems = document.querySelectorAll('.card-item .card');
+            cardItems.forEach((card, index) => {
+                const colorClass = `bg-soft-${colors[index % colors.length]}`;
+                card.classList.add(colorClass);
+            });
+        });
+
+        </script>
         {% block script %}
-        <!-- Le contenu spécifique de chaque page viendra ici -->
         {% endblock %}
+
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700;1,900&amp;display=swap"
             rel="stylesheet"
