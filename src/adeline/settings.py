@@ -219,23 +219,21 @@ cloudcube_base_url = os.environ.get('CLOUDCUBE_URL')
 
 AWS_S3_ENDPOINT_URL = cloudcube_base_url
 
-AWS_ACCESS_KEY_ID = os.environ.get('CLOUDCUBE_ACCESS_KEY_ID')
 
 if os.environ.get('ENV') == "PRODUCTION":
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     MEDIA_URL = f"{cloudcube_base_url}/media/"
+    AWS_ACCESS_KEY_ID = os.environ.get('CLOUDCUBE_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
+    AWS_S3_REGION_NAME = 'fr-par'
+    AWS_S3_SIGNATURE_VERSION = 's3v4'
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL = None  # Important pour éviter des erreurs de permissions
+    AWS_QUERYSTRING_AUTH = False  # Génère des URLs accessibles publiquement
 else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / "media"
 
-AWS_SECRET_ACCESS_KEY = os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
-
-AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
-
-AWS_S3_REGION_NAME = 'fr-par'
-AWS_S3_SIGNATURE_VERSION = 's3v4'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None  # Important pour éviter des erreurs de permissions
-AWS_QUERYSTRING_AUTH = False  # Génère des URLs accessibles publiquement
 
 django_heroku.settings(locals())
