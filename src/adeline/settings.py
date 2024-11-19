@@ -235,5 +235,7 @@ AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
 AWS_S3_REGION_NAME = 'fr-par'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None  # Important pour éviter des erreurs de permissions
+AWS_QUERYSTRING_AUTH = False  # Génère des URLs accessibles publiquement
 
 django_heroku.settings(locals())
