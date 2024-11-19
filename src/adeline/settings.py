@@ -244,7 +244,7 @@ if os.environ.get('ENV') == "PRODUCTION":
     AWS_S3_SIGNATURE_VERSION = 's3v4'
     AWS_S3_FILE_OVERWRITE = False
     AWS_DEFAULT_ACL = None  # Important pour éviter des erreurs de permissions
-    AWS_QUERYSTRING_AUTH = False  # Génère des URLs accessibles publiquement
+    AWS_QUERYSTRING_AUTH = False  # Génère des URLs accessibles publiquemen
 else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / "media"
