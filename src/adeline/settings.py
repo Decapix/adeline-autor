@@ -188,9 +188,10 @@ if os.environ.get('ENV') == "PRODUCTION":
     DATABASES['default'].update(db_from_env)
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
+
 
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
@@ -211,7 +212,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 # SCW_DEFAULT_ORGANIZATION_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
 # SCW_DEFAULT_PROJECT_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
 #
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 cloudcube_base_url = os.environ.get('CLOUDCUBE_URL')
@@ -220,6 +220,13 @@ cloudcube_base_url = os.environ.get('CLOUDCUBE_URL')
 AWS_S3_ENDPOINT_URL = cloudcube_base_url
 
 AWS_ACCESS_KEY_ID = os.environ.get('CLOUDCUBE_ACCESS_KEY_ID')
+
+if os.environ.get('ENV') == "PRODUCTION":
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    MEDIA_URL = f"{cloudcube_base_url}/media/"
+else:
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / "media"
 
 AWS_SECRET_ACCESS_KEY = os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
 
