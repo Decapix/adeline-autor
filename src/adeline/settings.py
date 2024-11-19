@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    # 'storages',
+    'storages',
     "django.contrib.messages",
     'django.contrib.staticfiles',
     'django.contrib.sites',
@@ -211,3 +211,21 @@ django_heroku.settings(locals())
 # SCW_SECRET_KEY=09d24409-ceb6-4781-8486-e55557ea9b02
 # SCW_DEFAULT_ORGANIZATION_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
 # SCW_DEFAULT_PROJECT_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
+#
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+cloudcube_base_url = os.environ.get('CLOUDCUBE_URL')
+
+
+AWS_S3_ENDPOINT_URL = cloudcube_base_url
+
+AWS_ACCESS_KEY_ID = os.environ.get('CLOUDCUBE_ACCESS_KEY_ID')
+
+AWS_SECRET_ACCESS_KEY = os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
+
+AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
+
+AWS_S3_REGION_NAME = 'fr-par'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+AWS_S3_FILE_OVERWRITE = False
