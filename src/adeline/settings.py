@@ -213,6 +213,20 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # SCW_DEFAULT_PROJECT_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
 #
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
+
 
 cloudcube_base_url = os.environ.get('CLOUDCUBE_URL')
 
