@@ -193,26 +193,7 @@ if os.environ.get('ENV') == "PRODUCTION":
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# AWS_S3_ENDPOINT_URL = "https://adeline-site-media.s3.fr-par.scw.cloud" # os.environ.get('CLOUDCUBE_URL')
-
-# AWS_ACCESS_KEY_ID = "SCW8QZSC6YW5GTQN3Y6D" # os.environ.get('CLOUDCUBE_ACCESS_KEY_ID')
-
-# AWS_SECRET_ACCESS_KEY = "09d24409-ceb6-4781-8486-e55557ea9b02" #os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
-
-# AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
-
-# AWS_S3_REGION_NAME = 'fr-par'
-# AWS_S3_SIGNATURE_VERSION = 's3v4'
-# AWS_S3_FILE_OVERWRITE = False
-# MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.scw.cloud/'
-# SCW_ACCESS_KEY=SCW8QZSC6YW5GTQN3Y6D
-# SCW_SECRET_KEY=09d24409-ceb6-4781-8486-e55557ea9b02
-# SCW_DEFAULT_ORGANIZATION_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
-# SCW_DEFAULT_PROJECT_ID=644f7ab9-a8bf-4974-b843-c584c691aecd
-#
-
+MEDIA_URL = "https://s3.fr-par.scw.cloud/"
 
 
 

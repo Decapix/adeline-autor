@@ -35,7 +35,7 @@ class S3FieldFile(FieldFile):
         )
 
         # Construire l'URL publique
-        self.name = f"{AWS_S3_ENDPOINT_URL}/{unique_filename}"
+        self.name = f"{unique_filename}"
 
         # Ne rien sauvegarder localement
         if save:
