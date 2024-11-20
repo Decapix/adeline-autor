@@ -7,15 +7,10 @@ def texts(request):
     texts = Text.objects.filter(show=True)
     return render(request, 'book/texts.html', {"texts": texts})
 
-
-
 def books(request):
     """view for Books"""
     books = Book.objects.filter(show=True)
     return render(request, 'book/books.html', {"books": books})
-
-
-
 
 def text_detail(request, id):
     text = get_object_or_404(Text, id=id)
@@ -25,9 +20,10 @@ def text_detail(request, id):
     main_image = images[0] if images else None
     return render(request, 'book/text-detail.html', {'text': text, 'images': images, 'main_image': main_image})
 
-
-
-
 def book_detail(request, id):
-    book = Book.objects.get(id=id)
-    return render(request, 'book/book-detail.html', {"book": book})
+    book = get_object_or_404(Book, id=id)
+    images = [book.image1, book.image2, book.image3, book.image4,
+                book.image5, book.image6, book.image7, book.image8]
+    images = [img for img in images if img]  # Exclure les images nulles
+    main_image = images[0] if images else None
+    return render(request, 'book/book-detail.html', {"book": book,  'images': images, 'main_image': main_image})

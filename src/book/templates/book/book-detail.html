@@ -1,7 +1,54 @@
+
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<section class="py-4 pt-10">
-{{book}}
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Grande image -->
+                <div class="col-md-5 col-lg-7 order-md-1 pt-8">
+                    {% if main_image %}
+                        <img id="main-image" loading="lazy" class="img-fluid rounded-3"
+                                src="{{ main_image.url }}" alt="Image principale">
+                    {% else %}
+                        <p>Aucune image disponible</p>
+                    {% endif %}
+                    <div class="row mt-3">
+                        <div class="col">
+                            <!-- Miniatures des images -->
+                            {% for image in images %}
+                                <img loading="lazy" class="img-thumbnail mx-1 small-image"
+                                        src="{{ image.url }}" alt="Image miniature"
+                                        data-image="{{ image.url }}">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-5 text-center text-md-start pt-5 pt-md-9">
+                    <h1 class="mb-4 display-2 fw-bold">{{ book.title }}</h1>
+                    <p class="mt-3 mb-4">{{ book.description }}</p>
+                </div>
+            </div>
+        </div>
+
+
 
 </section>
+{% endblock %}
+{% block script %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sélectionne la grande image et toutes les miniatures
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.small-image');
+
+        // Ajoute un événement `mouseover` à chaque miniature
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('mouseover', function () {
+                const newSrc = this.getAttribute('data-image');
+                mainImage.src = newSrc;
+            });
+        });
+    });
+</script>
 {% endblock %}
