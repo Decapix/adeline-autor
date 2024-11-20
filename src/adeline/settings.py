@@ -193,7 +193,7 @@ if os.environ.get('ENV') == "PRODUCTION":
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
-MEDIA_URL = "https://s3.fr-par.scw.cloud/"
+MEDIA_URL = "https://adeline-site-media.s3.fr-par.scw.cloud/"
 
 
 
