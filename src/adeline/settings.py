@@ -191,27 +191,25 @@ if os.environ.get('ENV') == "PRODUCTION":
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-if os.environ.get('ENV') == "PRODUCTION":
-    # Configuration pour Scaleway S3
-    INSTALLED_APPS += ['storages']
+#if os.environ.get('ENV') == "PRODUCTION":
+# Configuration pour Scaleway S3
+INSTALLED_APPS += ['storages']
 
-    AWS_ACCESS_KEY_ID = "SCWC8FM08VE5V04MW3JP"
-    AWS_SECRET_ACCESS_KEY = "70603b30-f9fd-4022-af48-f8124d171c22"
-    AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
-    AWS_S3_ENDPOINT_URL = "https://s3.fr-par.scw.cloud"
-    AWS_S3_REGION_NAME = "fr-par"
+AWS_ACCESS_KEY_ID = "SCWC8FM08VE5V04MW3JP"
+AWS_SECRET_ACCESS_KEY = "70603b30-f9fd-4022-af48-f8124d171c22"
+AWS_STORAGE_BUCKET_NAME = "adeline-site-media"
+AWS_S3_ENDPOINT_URL = "https://s3.fr-par.scw.cloud"
+AWS_S3_REGION_NAME = "fr-par"
 
-    # Public URL pour les médias
-    AWS_S3_CUSTOM_DOMAIN = f"{AWS_S3_ENDPOINT_URL}/{AWS_STORAGE_BUCKET_NAME}"
+# Public URL pour les médias
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_S3_ENDPOINT_URL}/{AWS_STORAGE_BUCKET_NAME}"
 
-    # Configuration de stockage par défaut pour les médias
-    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# Configuration de stockage par défaut pour les médias
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-    # ACL publique par défaut pour les objets
-    AWS_DEFAULT_ACL = "public-read"
-else:
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = BASE_DIR / "media"
+# ACL publique par défaut pour les objets
+AWS_DEFAULT_ACL = "public-read"
+
 
 
 django_heroku.settings(locals())
