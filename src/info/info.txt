@@ -1,0 +1,10 @@
+code : django
+deploy  : heroku
+domain name : scalway
+media : scalway s3 object storage
+
+pour les media :
+. la logique des champ image est dans book/s3field.py car django storage ne fonctionnait pas
+. il n'y a pas de logiquepour supprimer les element du bucket, il faut le faire de temps en temps pour les images inutile
+. de preference uploader en webp
+ 

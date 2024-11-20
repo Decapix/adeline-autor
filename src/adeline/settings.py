@@ -151,28 +151,18 @@ LOCALE_PATHS = (
     BASE_DIR / 'locale',
 )
 
-
-
-
-
-
 SITE_ID = 1
-
-
-
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 
 CONSTANCE_CONFIG = {
     #'BIOGRAPHY': ('biography', 'text Biography'),
 }
-
 
 
 # =============================================================================
