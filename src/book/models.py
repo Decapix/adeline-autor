@@ -6,6 +6,7 @@ class Book(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=255)
     description = models.TextField()
+    lien = models.CharField(max_length=500, null=True, blank=True)
     # image1 = models.ImageField(upload_to="media/", null=False, blank=False)  # Obligatoire
     # image2 = models.ImageField(upload_to="media/", null=True, blank=True)  # Optionnelle
     # image3 = models.ImageField(upload_to="media/", null=True, blank=True)  # Optionnelle
@@ -28,6 +29,7 @@ class Text(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=255)
     description = models.TextField()
+    lien = models.CharField(max_length=500, null=True, blank=True)
     image1 = models.ImageField(upload_to="media/", null=False, blank=False)  # Obligatoire
     image1 = S3FileField(upload_to="", blank=True, null=True)
     image2 = S3FileField(upload_to="", blank=True, null=True)
